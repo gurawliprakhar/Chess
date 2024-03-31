@@ -9,7 +9,8 @@ public class Knight extends Pieces{
         this.rows = rows;
         this.isWhite = isWhite;
         this.xPos = columns*board.tileSize;
-        
+        this.xPos = columns*board.tileSize;
+
 
     }
 }
