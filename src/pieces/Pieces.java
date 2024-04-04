@@ -4,6 +4,7 @@ package pieces;
 import Chess.Board;
 
 import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
@@ -26,11 +27,14 @@ public class Pieces {
             e.printStackTrace();
         }
     }
-
+    protected int sheetScale = sheet.getWidth()/6;
     BufferedImage sprite;
     Board board;
 
     public Pieces(Board board) {
         this.board = board;
+    }
+    public void paint(Graphics2D g2d){
+       g2d.drawImage(sprite,xPos,yPos,null);
     }
 }
